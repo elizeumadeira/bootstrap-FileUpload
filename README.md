@@ -104,6 +104,7 @@ Below is a detailed list of all of the available options to configure and custom
 | thumbHeight | 80 | number | Changes the height of the thumbnail to the set number in pixels |
 | fileTypes | please see the list of file types above | array | Limits the types of files that can be uploaded as well as accepted extensions |
 | debug | true | true or false | In the case of misconfiguration, this switch can either display a message to the user if true was set, or display a message in the console log. |
+| language | {btn_addfile: "Add File",btn_addfiles: "Add Files",btn_startupload: "Start Upload",btn_cancelupload: "Cancel Upload",btn_addmorefiles: "Add More Files",btn_removefile: "Remove File",message_uploadedsuccessfully: "Uploaded Successfully!"} |  | For you non English speaking folks out there :) |
 
 ## Callbacks
 
