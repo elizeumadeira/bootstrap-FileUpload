@@ -114,16 +114,16 @@ Callbacks are declared with the options. You can declare as many callbacks as yo
 
 | Callback Name | Return | Description |
 | ------------- | ------------- |
-| onInit | | Calls when the plugin is initialized |
-| onFileAdded | | Calls when a file is added to the list |
-| onFileRemoved | | Calls when a file is removed from the list |
-| onFileCancel | | Calls when the upload is canceled |
-| onFileProcessing | | Calls when the plugin begins processing the files |
-| onUploadProgress | | Calls when the progress bar is updated |
-| onUploadError | | Calls when an error is called while processing |
+| onInit | fileuploadobj | Calls when the plugin is initialized |
+| onFileAdded | fileuploadobj | Calls when a file is added to the list |
+| onFileRemoved | fileuploadobj | Calls when a file is removed from the list |
+| onFileCancel | fileuploadobj | Calls when the upload is canceled |
+| onFileProcessing | fileuploadobj | Calls when the plugin begins processing the files |
+| onUploadProgress | fileuploadobj | Calls when the progress bar is updated |
+| onUploadError | fileuploadobj | Calls when an error is called while processing |
 | onUploadSuccess | data, status, xhr, fileuploadobj | Calls when the file was uploaded successfully |
-| onUploadComplete | | Calls when the plugin has completed processing of all of the files |
-| onUploadReset | | Calls when the file list is reset |
+| onUploadComplete | fileuploadobj | Calls when the plugin has completed processing of all of the files |
+| onUploadReset | fileuploadobj | Calls when the file list is reset |
 
 ### Example
 
