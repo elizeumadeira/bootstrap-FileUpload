@@ -112,18 +112,18 @@ Callbacks can be useful if you wish to perform an additional task after a defaul
 
 Callbacks are declared with the options. You can declare as many callbacks as you wish and for multiple upload forms. An example is available under the table.
 
-| Callback Name | Description |
+| Callback Name | Return | Description |
 | ------------- | ------------- |
-| onInit | Calls when the plugin is initialized |
-| onFileAdded | Calls when a file is added to the list |
-| onFileRemoved | Calls when a file is removed from the list |
-| onFileCancel | Calls when the upload is canceled |
-| onFileProcessing | Calls when the plugin begins processing the files |
-| onUploadProgress | Calls when the progress bar is updated |
-| onUploadError | Calls when an error is called while processing |
-| onUploadSuccess | Calls when the file was uploaded successfully |
-| onUploadComplete | Calls when the plugin has completed processing of all of the files |
-| onUploadReset | Calls when the file list is reset |
+| onInit | | Calls when the plugin is initialized |
+| onFileAdded | | Calls when a file is added to the list |
+| onFileRemoved | | Calls when a file is removed from the list |
+| onFileCancel | | Calls when the upload is canceled |
+| onFileProcessing | | Calls when the plugin begins processing the files |
+| onUploadProgress | | Calls when the progress bar is updated |
+| onUploadError | | Calls when an error is called while processing |
+| onUploadSuccess | data, status, xhr, fileuploadobj | Calls when the file was uploaded successfully |
+| onUploadComplete | | Calls when the plugin has completed processing of all of the files |
+| onUploadReset | | Calls when the file list is reset |
 
 ### Example
 
@@ -139,7 +139,14 @@ $("#myUpload").bootstrapFileUpload({
 	},
     onFileAdded: function () {
     	window.alert("file added!");
-    }
+	},
+	onUploadSuccess: function(data, status, xhr, fileuploadobj){
+		// the same object returned in jquery $.ajax success function
+		console.log(data, status, xhr);
+
+		//plus: the bootstrapFileUpload object itself
+		console.log(fileuploadobj);
+	}
 });
 ```
 
