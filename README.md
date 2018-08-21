@@ -113,7 +113,7 @@ Callbacks can be useful if you wish to perform an additional task after a defaul
 Callbacks are declared with the options. You can declare as many callbacks as you wish and for multiple upload forms. An example is available under the table.
 
 | Callback Name | Return | Description |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | onInit | fileuploadobj | Calls when the plugin is initialized |
 | onFileAdded | fileuploadobj | Calls when a file is added to the list |
 | onFileRemoved | fileuploadobj | Calls when a file is removed from the list |
